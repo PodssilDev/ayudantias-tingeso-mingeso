@@ -2,6 +2,7 @@
 * **Correo profesor: alcides.quispe@usach.cl**
 * **Correo ayudante: john.serrano@usach.cl**
 * [Click aqui para acceder a la carpeta OneDrive (Acceso solo con correo USACH)](https://usachcl-my.sharepoint.com/:f:/g/personal/john_serrano_usach_cl/ElCnSlPjVmRGl34nc21hs_oBe8QPJ8hVZtT2r25hHG7QOA?e=Z3BDb0)
+
 ## Horarios y salas de ayudantía
 * **Sección A-1:** Bloque J2, Sala ED 802
 * **Sección B-2:** Bloque W5, Sala ED 802
@@ -24,3 +25,7 @@
 #### Servidor de la Nube (Elegir uno)
 * [Amazon Web Services](https://aws.amazon.com/es/?nc2=h_lg)
 * [DigitalOcean](https://www.digitalocean.com/)
+
+## Links utiles
+* [Repositorio PEP 1 2022-1](https://github.com/PodssilDev/Tingeso_PEP1)
+* [Docker Docs](https://docs.docker.com/)
