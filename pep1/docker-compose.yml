@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  mysql-db:
+    image: mysql
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: tingeso2023
+    ports:
+      - 33060:3306
+  app:
+    container_name: proyecto_docker
+    image: johnserrano159/proyecto_docker
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/tingeso2023?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+    deploy:
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - mysql-db
