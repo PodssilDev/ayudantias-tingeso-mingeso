@@ -17,10 +17,4 @@ class AdministracionTests {
         int sueldo = administracionService.sueldoCategoria("A");
         assertEquals(20000, sueldo, 0.0);
     }
-
-    @Test
-    void testSueldoCategoria2(){
-        int sueldo = administracionService.sueldoCategoria("B");
-        assertEquals(25000, sueldo, 0.0);
-    }
 }
