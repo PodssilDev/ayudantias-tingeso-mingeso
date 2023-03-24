@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: tingeso.mingeso.pep1.AdministracionTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.106 s - in tingeso.mingeso.pep1.AdministracionTests
