@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <title>Cargar CSV</title>
+  <style>
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 2%;
+    }
+    .f{
+      margin-top: 40px;
+      border: 3px solid rgb(162, 161, 161);
+      padding: 40px;
+      padding-top: 10px;
+      border-radius: 40px;
+      margin-left: 300px;
+      margin-right: 300px;
+    }
+    @media(max-width: 1200px){
+      .f{margin-left: 200px;
+        margin-right: 200px;}
+    }
+    .header{
+      background-color: #1b3039;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 85px;
+      padding: 5px 10%;
+    }
+    .header .logo{
+      margin-right: auto;
+      color: white;
+      font-family: 'Pacifico',serif;
+    }
+    .header .btn button{
+      margin-left: 20px;
+      font-weight: 700;
+      color: #1b3039;
+      padding: 9px 25px;
+      background: #eceff1;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+    .header .btn button:hover{
+      background-color: #e2f1f8;
+      color: #ffbc0e;
+      transform: scale(1.1);
+    }
+    .header .btn-2 button {
+      margin-left: 20px;
+      font-weight: 700;
+      color: #1b3039;
+      padding: 9px 25px;
+      background: #eceff1;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+    .header .btn-2 button:hover{
+      background-color: #e2f1f8;
+      color: #ffbc0e;
+      transform: scale(1.1);
+    }
+    .form1{
+      border: 1px solid rgb(82, 82, 173);
+      padding: 30px;
+      border-radius: 30px;
+      margin-left: 300px;
+      margin-right: 300px;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+    <h1>MilkStgo</h1>
+  </div>
+  <nav>
+  </nav>
+  <a class="btn" href="/"><button>Volver al menú principal</button></a>
+  <a class="btn-2" href="/fileInformation"><button>Ver el último CSV cargado</button></a>
+</header>
+<div class = "f">
+<div class="container">
+  <h1><b>Cargar el archivo de datos</b></h1>
+  <form th:action="@{/fileUpload}" method="POST" enctype="multipart/form-data">
+    <br>
+    <input type="file" class="form-control" name="file" accept = ".csv">
+    <br>
+    <input class = "btn btn-primary"
+          type="submit" value="Cargar el archivo a la Base de Datos">
+  </form>
+  <br>
+  <u><b> <h2 th:text="${mensaje}"></h2></b></u>
+</div>
+</div>
+<br>
+<hr>
+
+<div class = "form1">
+  <h5><b>Recuerde que debe cargar un archivo Excel de extensión .csv!</b></h5>
+</div>
+</body>
+</html>

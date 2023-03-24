@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProveedorController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Tingeso</a> &gt; <a href="index.source.html" class="el_package">tingeso.mingeso.pep1.controllers</a> &gt; <span class="el_source">ProveedorController.java</span></div><h1>ProveedorController.java</h1><pre class="source lang-java linenums">package tingeso.mingeso.pep1.controllers;
+
+import tingeso.mingeso.pep1.entities.ProveedorEntity;
+import tingeso.mingeso.pep1.services.ProveedorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.ArrayList;
+
+@Controller
+@RequestMapping
+<span class="fc" id="L17">public class ProveedorController {</span>
+
+    @Autowired
+    private ProveedorService proveedorService;
+
+    @GetMapping(&quot;/lista-proveedores&quot;)
+    public String listar(Model model) {
+<span class="nc" id="L24">        ArrayList&lt;ProveedorEntity&gt; proveedores = proveedorService.obtenerProveedores();</span>
+<span class="nc" id="L25">        model.addAttribute(&quot;proveedores&quot;, proveedores);</span>
+<span class="nc" id="L26">        return &quot;index&quot;;</span>
+    }
+
+    @GetMapping(&quot;/nuevo-proveedor&quot;)
+    public String proveedor(){
+<span class="nc" id="L31">        return &quot;nuevo-proveedor&quot;;</span>
+    }
+    @PostMapping(&quot;/nuevo-proveedor&quot;)
+    public String nuevoProveedor(@RequestParam(&quot;codigo&quot;) String codigo,
+                                 @RequestParam(&quot;nombre&quot;) String nombre,
+                                 @RequestParam(&quot;categoria&quot;) String categoria,
+                                 @RequestParam(&quot;retencion&quot;) String retencion){
+<span class="nc" id="L38">        proveedorService.guardarProveedor(codigo, nombre, categoria, retencion);</span>
+<span class="nc" id="L39">        return &quot;redirect:/nuevo-proveedor&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
