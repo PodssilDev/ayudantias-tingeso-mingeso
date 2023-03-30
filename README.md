@@ -6,7 +6,7 @@
 ## Horarios y salas de ayudantía
 * **Sección A-1:** Bloque J2, Sala ED 802
 * **Sección B-2:** Bloque W5, Sala ED 802
-* **Online:** Horario por confirmar
+* **Online:**: Jueves a las 18:30 mediante Zoom (No definitivo)
 
 ## Herramientas y técnologías a utilizar
 ### Evaluación 1
