@@ -6,22 +6,24 @@
 ## Horarios y salas de ayudantía
 * **Sección A-1:** Bloque J2, Sala ED 802
 * **Sección B-2:** Bloque W5, Sala ED 802
-* **Online:**: Jueves a las 18:30 mediante Zoom (No definitivo)
+* **Online:** Jueves a las 18:30 mediante Zoom (No definitivo)
 
 ## Herramientas y técnologías a utilizar
 ### Evaluación 1
 * [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [SpringBoot](https://start.spring.io/)
-* [MySQL](https://www.mysql.com/)
-* [Docker](https://www.docker.com/products/docker-desktop/)
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+* [Apache Maven](https://maven.apache.org/download.cgi)
+* [SonarQube Community Edition](https://www.sonarsource.com/products/sonarqube/)
 * [Jenkins](https://www.jenkins.io/)
-* [SonarQube](https://www.sonarsource.com/products/sonarqube/)
-* [Terraform](https://www.terraform.io/)
 * [Oracle VM VirtualBox](https://www.virtualbox.org/) (En el caso de no tener acceso a Ubuntu nativo)
+* [Terraform](https://www.terraform.io/)
+
 #### Gestor de Base de Datos Relacional (Elegir uno)
 * [MySQL](https://www.mysql.com/)
 * [PostgreSQL](https://www.postgresql.org/)
+
 #### Servidor de la Nube (Elegir uno)
 * [Amazon Web Services](https://aws.amazon.com/es/?nc2=h_lg)
 * [DigitalOcean](https://www.digitalocean.com/)
@@ -29,3 +31,4 @@
 ## Links utiles
 * [Repositorio PEP 1 2022-1](https://github.com/PodssilDev/Tingeso_PEP1)
 * [Docker Docs](https://docs.docker.com/)
+* [Como cambiar entre multiples versiones de JDK en Windows](https://youtu.be/A5FHcR3cE-w)
