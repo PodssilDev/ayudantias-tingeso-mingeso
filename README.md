@@ -32,3 +32,5 @@
 * [Repositorio PEP 1 2022-1](https://github.com/PodssilDev/Tingeso_PEP1)
 * [Docker Docs](https://docs.docker.com/)
 * [Como cambiar entre multiples versiones de JDK en Windows](https://youtu.be/A5FHcR3cE-w)
+* [Almacenamiento oficial de JDKs](https://jdk.java.net/archive/)
+* [Sonarqube Docs](https://docs.sonarqube.org/latest/)
