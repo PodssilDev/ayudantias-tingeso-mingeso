@@ -90,6 +90,7 @@ public class SubirDataService {
         dataRepository.save(data);
     }
 
+
     public void guardarDataDB(String fecha, String turno, String proveedor, String kls_leche){
          SubirDataEntity newData = new SubirDataEntity();
          newData.setFecha(fecha);
