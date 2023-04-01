@@ -67,6 +67,7 @@ Esto nos mostrará el análisis de mantenibilidad, confiabilidad y seguridad de 
 
 Si bien podemos aumentar el porcentaje de cobertura realizando Tests Unitarios, por defecto SonarQube también considerará a los Controllers, Entities y Repositories. Ya que solo se pide realizar tests para los Services, podemos colocar que SonarQube ignore completamente a los Entities, Controllers y Repositories colocando dentro en nuestro pom.xml lo siguiente dentro de **Properties** (abajo donde se especifica la versión de java):
 
+(Ejemplo, las rutas podrian cambiar dependiendo del nombre del proyecto)
 ```
 		<sonar.exclusions>
 			src/main/java/tingeso/mingeso/pep1/entities/*,
