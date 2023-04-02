@@ -1,1 +1,1 @@
-mvn clean verify sonar:sonar  -Dsonar.projectKey=pep1  -Dsonar.host.url=http://localhost:9000  -Dsonar.login=sqp_fc56b1ba154bd3b0bf2aaa644210b01404548520
+mvn sonar:sonar  -Dsonar.projectKey=pep1  -Dsonar.host.url=http://localhost:9000  -Dsonar.login=sqp_fc56b1ba154bd3b0bf2aaa644210b01404548520
