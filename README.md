@@ -17,6 +17,7 @@
 * [Apache Maven](https://maven.apache.org/download.cgi)
 * [SonarQube Community Edition](https://www.sonarsource.com/products/sonarqube/)
 * [Jenkins](https://www.jenkins.io/)
+* [Nginx](https://www.nginx.com/)
 * [Oracle VM VirtualBox](https://www.virtualbox.org/) (En el caso de no tener acceso a Ubuntu nativo)
 * [Terraform](https://www.terraform.io/)
 
@@ -34,3 +35,4 @@
 * [Como cambiar entre multiples versiones de JDK en Windows](https://youtu.be/A5FHcR3cE-w)
 * [Almacenamiento oficial de JDKs](https://jdk.java.net/archive/)
 * [Sonarqube Docs](https://docs.sonarqube.org/latest/)
+* [Jenkins Docs](https://www.jenkins.io/doc/)
