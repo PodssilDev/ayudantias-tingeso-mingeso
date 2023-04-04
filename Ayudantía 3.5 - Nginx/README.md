@@ -168,6 +168,4 @@ Si todo resultó bien, notaremos que se han levantado 5 contenedores:
 Si bien la consola dice que la aplicación se ha levantado en el puerto 8090 (o el que hayamos decidido) la realidad es que ahora podemos acceder a la aplicación
 simplemente utilizando http://localhost/ . Notemos que lo anterior no lleva puerto (Esto es porque se está utilizando el puerto HTTP!)
 
-También, si observamos la consola de Docker, observaremos que cada cierto la aplicación va a ir cambiando la replica que se está usando, por lo que, por ejemplo,
-a veces algunas instrucciones realizadas con la app 1 se realizarán con la app 2 o 3, y vice versa.
-
+También, si observamos la consola de Docker, observaremos que cada cierto tiempo la aplicación va a ir rotando la replica que se está usando, por lo que, por ejemplo, a veces algunas instrucciones realizadas con la app 1 se realizarán con la app 2 o 3, y vice versa.
