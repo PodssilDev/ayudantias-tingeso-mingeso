@@ -10,6 +10,9 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - app
+      - app2
+      - app3
+
   mysql-db:
     image: mysql
     restart: always
@@ -20,11 +23,42 @@ services:
       MYSQL_DATABASE: tingeso2023
     ports:
       - 33060:3306
-  app:
-    container_name: proyecto_docker
+
+  app1:
+    container_name: proyecto_docker1
     image: johnserrano159/proyecto_docker
     ports:
-      - "8090:8090"
+      - "8091:8090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/tingeso2023?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+    deploy:
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - mysql-db
+
+  app2:
+    container_name: proyecto_docker2
+    image: johnserrano159/proyecto_docker
+    ports:
+      - "8092:8090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/tingeso2023?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+    deploy:
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - mysql-db
+
+  app3:
+    container_name: proyecto_docker3
+    image: johnserrano159/proyecto_docker
+    ports:
+      - "8093:8090"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/tingeso2023?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
       - SPRING_DATASOURCE_USERNAME=root
