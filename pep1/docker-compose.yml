@@ -9,7 +9,7 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
-      - app
+      - app1
       - app2
       - app3
 
