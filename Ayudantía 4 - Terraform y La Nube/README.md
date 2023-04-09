@@ -8,6 +8,10 @@
 
 ### Instalación de Terraform en Ubuntu Linux
 
+```
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli?in=terraform%2Faws-get-started
+```
+
 En primer lugar, debemos ejecutar el siguiente comando:
 
 ```
