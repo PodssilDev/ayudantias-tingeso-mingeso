@@ -139,3 +139,155 @@ Donde (IP4 PUBLICA) es nuestra IP pública o IPV4 pública. Aceptamos y si todo 
 
 ## Instalación de Docker en nuestra Instancia de AWS 
 
+En primer lugar, debemos asegurarnos que nuestra instancia esté totalmente configurada. Ejecutamos el siguiente comando:
+
+```
+sudo yum update
+```
+
+Ahora instalamos Docker, ejecutando:
+
+```
+sudo yum install docker
+```
+
+Debemos darle permisos a nuestro usuario ec2 para que pueda utilizar Docker sin problemas. Ejecutamos los siguientes comandos:
+
+```
+sudo usermod -a -G docker ec2-user
+```
+
+```
+id ec2-user
+```
+
+```
+newgrp docker
+```
+
+Ahora debemos intalar Docker-Compose. Ejecutamos los siguientes comandos:
+
+```
+wget https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) 
+```
+
+```
+sudo mv docker-compose-$(uname -s)-$(uname -m) /usr/local/bin/docker-compose
+```
+
+```
+sudo chmod -v +x /usr/local/bin/docker-compose
+```
+
+Podemos comprobar que tanto docker y docker-compose esten instalados correctamente
+
+```
+docker -v
+```
+
+```
+docker-compose -v
+```
+
+Ahora debemos configurar que el servicio de Docker siempre esté activo, de tal forma de que cuando bajemos el servidor y lo volvamos a activar, no tengamos que configurar Docker manualmente. Para ello, ejecutamos los siguientes comandos:
+
+```
+sudo systemctl enable docker.service
+```
+
+```
+sudo systemctl start docker.service
+```
+
+Podemos visualizar que se haya inicializado correctamente:
+
+```
+sudo systemctl status docker.service
+```
+
+## Docker-compose y Nginx
+
+Ya casi estamos listos. Necesitamos tener nuestro docker-compose.yml y nuestra configuración de Nginx para poder levantar la aplicación. Primero, debemos de asegurar que tengamos nuestro docker-compose.yml disponible localmente, ya que así solo necesitamos copiarlo y modificarle algo muy pequeño. 
+
+Ejecutamos el siguiente comando en nuestro servidor:
+
+```
+vi docker-compose.yml
+```
+
+Esto nos abrirá una terminal aparte. Apretamos la tecla *a* y esto nos permitirá editar. Pegamos el contenido de nuestro docker-compose.yml local y modificamos la versión de *3.8* a *3.5*. Esto evitará que suceda un error con la versión *3.8* de Docker Compose. Cuando ya hayamos realizado la modificación, apretamos la tecla **ESC** y escribimos **:wq** y apretamos **ENTER**. Esto cerrará la terminal que tiene el código de nuestro docker-compose y podemos comprobar que efectivamente se haya guardado exitosamente.
+
+Si escribimos:
+
+```
+cat docker-compose.yml
+```
+
+Se mostrará por consola el contenido del docker-compose.yml que está en el servidor. Si algo no se guardó bien o hay algún error de escritura, podemos volver a escribir **vi docker-compose.yml** y luego apretar *a* para modificarlo.
+
+Ahora, nos falta pasar la configuración de Nginx. Creamos un nuevo directorio llamado nginx, ejecutando:
+
+```
+mkdir nginx
+```
+
+Luego accedemos a el, utilizando:
+
+```
+cd nginx
+```
+
+Luego creamos otro directorio llamado conf.d:
+
+```
+mkdir conf.d
+```
+
+Accedemos a el:
+
+```
+cd conf.d
+```
+Y ahora creamos el nombre de nuestro archivo .conf, utilizando 
+
+```
+vi (NOMBRE_APP).conf
+```
+
+Donde (NOMBRE_APP) es el nombre de nuestra aplicación. Copiamos el contenido de nuestro archivo .conf local al archivo .conf creado dentro de nuestro servidor y guardamos. 
+
+Ahora debemos volver a la raíz de nuestro servidor. Ejecutamos:
+
+```
+cd
+```
+
+## La hora de la verdad: Ejecutar Docker Compose
+
+Todo lo ha anterior ha llevado a este momento: Nos falta solamente ejecutar Docker Compose.
+
+Antes de hacerlo, podemos comprobar que tengamos el docker-compose.yml y la carpeta nginx en la raíz de nuestro servidor ejecutando el comando **ls**. Si es así, ejecutamos:
+
+```
+docker-compose --compatibility up
+```
+
+Compatibility hará que hayan menos probabilidades que nuestro docker-compose no falle. Esperamos a que se ejecute (Esto depende de la RAM de nuestro Ubuntu Local como también la RAM de nuestro servidor. Nuestro servidor deberia tener 2 GB de RAM, suficiente para ejecutar las 3 replicas).
+
+Cuando ya todo haya iniciado correctamente, en cualquier navegador web accedemos a la ip pública de nuestro servidor y listo! Deberiamos poder interactuar con nuestra aplicación y si le pasamos la IP a cualquier persona, también deberia poder acceder, siempre y cuando el servidor esté encendido.
+
+Cuando queramos bajar el docker-compose, apretamos CTRL + C y luego:
+
+```
+docker-compose down
+```
+
+## Matando a Terraform
+
+Si bien es bonito tener una Instancia de AWS, siempre se recomienda eliminarlas cuando no se usen Para salir de la Maquina Virtual de nuestro servidor escribimos **exit** y esto nos devolverá a nuestro terminal normal de Ubuntu. Para eliminar la instancia, podemos escribir:
+
+```
+terraform destroy
+```
+
+Lo anterior nos pedirá confirmación. Esto también hará que la instancia se elimine de los servidores de AWS. **Es necesario hacer esto cuando ya finalicemos con la evaluación, para evitar el uso de recursos inecesarios y futuros costos monetarios**.
