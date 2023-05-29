@@ -6,9 +6,25 @@
 ## Horarios y salas de ayudantía
 * **Sección A-1:** Bloque J2, Sala ED 802
 * **Sección B-2:** Bloque W5, Sala ED 802
-* **Online:** Jueves a las 18:30 mediante Zoom (No definitivo)
+* **Online:** Viernes a las 18:30 (Mediante Zoom)
 
 ## Herramientas y técnologías a utilizar
+### Evaluación 2
+* [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [SpringBoot](https://start.spring.io/)
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+* [Oracle VM VirtualBox](https://www.virtualbox.org/) (En el caso de no tener acceso a Ubuntu nativo)
+* [Node JS](https://nodejs.org/en)
+* [React JS](https://react.dev/)
+* [Prometheus](https://prometheus.io/)
+* [Grafana](https://grafana.com/)
+* [Kubernetes](https://kubernetes.io/es/)
+
+#### Gestor de Base de Datos Relacional (Elegir uno)
+* [MySQL](https://www.mysql.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+
 ### Evaluación 1
 * [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows)
 * [Visual Studio Code](https://code.visualstudio.com/)
@@ -30,7 +46,8 @@
 * [DigitalOcean](https://www.digitalocean.com/)
 
 ## Links utiles
-* [Repositorio PEP 1 2022-1](https://github.com/PodssilDev/Tingeso_PEP1)
+* [Repositorio PEP 1 2022-2](https://github.com/PodssilDev/Tingeso_PEP1)
+* [Repositorio PEP 2 2022-2](https://github.com/PodssilDev/Tingeso_PEP2)
 * [Docker Docs](https://docs.docker.com/)
 * [Como cambiar entre multiples versiones de JDK en Windows](https://youtu.be/A5FHcR3cE-w)
 * [Almacenamiento oficial de JDKs](https://jdk.java.net/archive/)
