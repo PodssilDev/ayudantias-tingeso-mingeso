@@ -57,14 +57,6 @@ sudo install minikube-darwin-arm64 /usr/local/bin/minikube
 
 Una vez instalado se generará un contenedor docker corriendo la instancia de minikube
 
-![alt text](img1.png "Title")
-
-## Kubectl - Descarga
-
-- Windows: https://kubernetes.io/docs/tasks/tools/install-kubectl-windows
-- Mac: https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/
-- Linux: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
-
 ## Obtener pods
 
 ```
