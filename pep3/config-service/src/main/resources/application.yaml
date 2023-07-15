@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/PodssilDev/ayudantias-tingeso-mingeso
+          search-paths: config-data2
+  application:
+    name: config-service

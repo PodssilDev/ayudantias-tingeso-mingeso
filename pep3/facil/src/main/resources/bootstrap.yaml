@@ -1,0 +1,21 @@
+spring:
+  devtools:
+    restart:
+      aditional-paths: src/main/java
+  application:
+    name: facil
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: MySQL8Dialect
+      ddl-auto: create
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    dbname: prueba_facil
+    url: jdbc:mysql://localhost:3306/prueba_facil?autorReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: password
