@@ -9,6 +9,20 @@
 * **Online:** Viernes a las 18:30 (Mediante Zoom)
 
 ## Herramientas y técnologías a utilizar
+
+### Evaluación 3
+
+* [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [SpringBoot](https://start.spring.io/)
+* [Node JS](https://nodejs.org/en)
+* [React JS](https://react.dev/)
+
+#### Gestor de Base de Datos Relacional (Elegir uno)
+* [MySQL](https://www.mysql.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [MongoDB](https://www.mongodb.com/)
+
 ### Evaluación 2
 * [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows)
 * [Visual Studio Code](https://code.visualstudio.com/)
@@ -53,3 +67,5 @@
 * [Almacenamiento oficial de JDKs](https://jdk.java.net/archive/)
 * [Sonarqube Docs](https://docs.sonarqube.org/latest/)
 * [Jenkins Docs](https://www.jenkins.io/doc/)
+* [Code Blocks para React JS](https://www.npmjs.com/package/react-code-blocks)
+* [Code Mirror](https://codemirror.net/)
