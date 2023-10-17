@@ -12,8 +12,9 @@ provider "digitalocean" {
 }
 
 # Create a new Web Droplet in the nyc2 region
+# 16/10/2023: ubuntu-18-04-x64 ya no funciona. Usar ubuntu-20-04-x64 en su reemplazo
 resource "digitalocean_droplet" "web" {
-  image  = "ubuntu-18-04-x64"
+  image  = "ubuntu-20-04-x64"
   name   = "web-1"
   region = "nyc3"
   size   = "s-1vcpu-2gb"
