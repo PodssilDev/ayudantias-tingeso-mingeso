@@ -1,0 +1,1 @@
+start /wait /D CARPETA mvnw clean install -f pom.xml
