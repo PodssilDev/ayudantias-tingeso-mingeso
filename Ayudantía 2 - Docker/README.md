@@ -66,10 +66,10 @@ En IntelliJ, en el lado derecho hay un boton que dice **Maven**. Al apretarlo se
 
 #### Creación de Dockerfile
 
-Dentro de la carpeta target, hay un archivo.jar. Debemos tener en cuenta este nombre, ya que es necesario para la creación de un Dockerfile, un archivo que nos permitirá subir nuestra aplicación a Dockerhub. Este archivo debe ser creado en la raíz de nuestro proyecto y debe ser llamado simplemente **Dockerfile** y no tener extensión.
+Dentro de la carpeta target, hay un archivo.jar. Debemos tener en cuenta este nombre, ya que es necesario para la creación de un Dockerfile, un archivo que nos permitirá subir nuestra aplicación a Dockerhub. Este archivo debe ser creado en la raíz de nuestro proyecto y debe ser llamado simplemente **Dockerfile** y no tener extensión. **(Actualizado Febrero 2026!)**
 
 ```
-FROM openjdk:19
+FROM eclipse-temurin:25-jre-alpine
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} pep1-0.0.1-SNAPSHOT.jar
 EXPOSE 8090
